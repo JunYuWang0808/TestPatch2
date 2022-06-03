@@ -4065,7 +4065,7 @@ public final class JavaCore extends Plugin {
 							new IWorkspaceRunnable() {
 								public void run(IProgressMonitor progress) throws CoreException {
 									JavaModelManager manager = JavaModelManager.getJavaModelManager();
-									ISavedState savedState = workspace.addSaveParticipant(JavaCore.this, (ISaveParticipant) manager);
+									ISavedState savedState = workspace.addSaveParticipant(JavaCore.this, manager);
 									if (savedState != null) {
 										// the event type coming from the saved state is always POST_AUTO_BUILD
 										// force it to be POST_CHANGE so that the delta processor can handle it
